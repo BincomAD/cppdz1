@@ -10,11 +10,11 @@
 
 Скачать датасет по ссылке можно с помощью команды wget, например
 
-wget https://data.metabrainz.org/pub/musicbrainz/data/fullexport/20230304-002037/mbdump.tar.bz2
+`wget https://data.metabrainz.org/pub/musicbrainz/data/fullexport/20230304-002037/mbdump.tar.bz2`
 
 Полученный файл нужно распаковать
 
-tar xvf mbdump.tar.bz2
+`tar xvf mbdump.tar.bz2`
 
 Все файлы кроме gender, area, artist, artist_type можно удалить с помощью команды rm.
 Программа должна принимать необходимые для работы имена распакованных файлов в качестве аргументов командной строки и выводить данные в стандартный вывод.
