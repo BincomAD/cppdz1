@@ -24,7 +24,10 @@ void Parser::parse(string path, char delim) {
 
 void Parser::output(int min, int max) {
 	for(int i = 0; i < count; ++i) {
-		if((nameAndYear[i][4] != "\\N") && stoi(nameAndYear[i][4]) <= max && stoi(nameAndYear[i][4]) >= min) {
+		if( nameAndYear[i][10] == "2" && 
+			nameAndYear[i][4] != "\\N" && 
+			stoi(nameAndYear[i][4]) <= max && 
+			stoi(nameAndYear[i][4]) >= min ) {
 			std::cout << nameAndYear[i][2] << endl;
 		}
 	}
