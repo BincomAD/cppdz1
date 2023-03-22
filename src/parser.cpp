@@ -14,11 +14,11 @@ void Parser::parse(string path, char delim) {
             			out.push_back(word);
             			word.clear();
         		}
-    	}
+    		}
     	out.push_back(word);
     	nameAndYear.push_back(out);
     	count++;
-		out.clear();
+	out.clear();
 	}
 }
 

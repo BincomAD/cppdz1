@@ -1,0 +1,5 @@
+cmake_minimum_required(VERSION 2.8)
+project(dz1)
+set(SOURCE src/main.cpp src/checkinput.cpp src/parser.cpp)
+include_directories(headers)	
+add_executable(dz1 ${SOURCE})
