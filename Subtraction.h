@@ -8,6 +8,6 @@ private:
 	ICalculatable* _rightOperand;
 public:
 	Subtraction(ICalculatable* left, ICalculatable* right);
-	virtual ~Subtaction();
+	virtual ~Subtraction();
 	virtual double Calculate() const override;
 };

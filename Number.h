@@ -1,8 +1,8 @@
 #pragma once
 
-#include "ICalculatable"
+#include "ICalculatable.h"
 
-class Number : public ICalculatble {
+class Number : public ICalculatable {
 private:
 	double m_value;
 public: 

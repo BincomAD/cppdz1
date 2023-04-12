@@ -7,6 +7,6 @@ Square::~Square() {
 	delete _Operand;
 }
 
-double Square::Calculate() const override {
+double Square::Calculate() const {
 	return std::sqrt(_Operand->Calculate());
 }

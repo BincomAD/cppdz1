@@ -8,6 +8,6 @@ Addition::~Addition() {
 	delete _rightOperand;
 }
 
-double Addition::Calculate() const override {
-	return _leftOperand->Calculate() + _rightOpernd->Calculate();
+double Addition::Calculate() const{
+	return _leftOperand->Calculate() + _rightOperand->Calculate();
 }

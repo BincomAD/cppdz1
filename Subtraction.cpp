@@ -8,6 +8,6 @@ Subtraction::~Subtraction() {
 	delete _rightOperand;
 }
 
-double Subtraction::Calculate() const override {
-	return _leftOperand->Calculate() - _rightOpernd->Calculate();
+double Subtraction::Calculate() const {
+	return _leftOperand->Calculate() - _rightOperand->Calculate();
 }

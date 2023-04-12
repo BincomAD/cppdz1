@@ -7,6 +7,6 @@ Bracket::~Bracket() {
 	delete _Operand;
 }
 
-double Bracket::Calculate() const override {
+double Bracket::Calculate() const {
 	return _Operand->Calculate();
 }

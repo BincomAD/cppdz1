@@ -66,7 +66,7 @@ ICalculatable* ExpressionParser::ParseTerm()
         {
             _currentTokenIndex++;
             ICalculatable* operand = ParseFactor();
-            leftOperand = new SquareRoot(operand);
+            leftOperand = new Square(operand);
         }
         else if (op == "ceil")
         {

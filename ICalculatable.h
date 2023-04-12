@@ -1,9 +1,8 @@
 #pragma once
 
-// Èםעונפויס ICalculatable
 class ICalculatable
 {
 public:
+    virtual ~ICalculatable() {}
     virtual double Calculate() const = 0;
-    virtual ~ICalculatble() {}
 };
