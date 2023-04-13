@@ -1,0 +1,5 @@
+cmake_minimum_required(VERSION 2.8)
+project(calculate)
+set(SOURCE src/Addition.cpp src/Bracket.cpp src/Ceil.cpp src/ExpressionParser.cpp src/main.cpp src/Multiplication.cpp src/Square.cpp src/Subtraction.cpp)
+include_directories(headers)	
+add_executable(calculate ${SOURCE})	

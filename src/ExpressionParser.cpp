@@ -64,13 +64,12 @@ ICalculatable* ExpressionParser::ParseTerm()
         }
         else if (op == "sqrt")
         {
-            _currentTokenIndex++;
+        	_currentTokenIndex++;
             ICalculatable* operand = ParseFactor();
             leftOperand = new Square(operand);
         }
         else if (op == "ceil")
         {
-            _currentTokenIndex++;
             ICalculatable* operand = ParseFactor();
             leftOperand = new Ceil(operand);
         }
@@ -97,6 +96,18 @@ ICalculatable* ExpressionParser::ParseFactor()
         }
         _currentTokenIndex++;
         return new Bracket(expr);
+    }
+    else if (token == "sqrt")
+    {
+        _currentTokenIndex++;
+        ICalculatable* operand = ParseFactor();
+        return new Square(operand);
+    }
+    else if (token == "ceil")
+    {
+        _currentTokenIndex++;
+        ICalculatable* operand = ParseFactor();
+        return new Ceil(operand);
     }
     else
     {
