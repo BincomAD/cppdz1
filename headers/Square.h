@@ -5,9 +5,8 @@
 
 class Square : public ICalculatable {
 private:
-	ICalculatable* _Operand;
+	std::unique_ptr<ICalculatable> _Operand;
 public:
-	Square(ICalculatable* operand);
-	virtual ~Square();
+	Square(std::unique_ptr<ICalculatable> operand);
 	virtual double Calculate() const override;
 };

@@ -5,9 +5,8 @@
 
 class Bracket : public ICalculatable {
 private:
-	ICalculatable* _Operand;
+	std::unique_ptr<ICalculatable> _Operand;
 public:
-	Bracket(ICalculatable* operand);
-	virtual ~Bracket();
+	Bracket(std::unique_ptr<ICalculatable> operand);
 	virtual double Calculate() const override;
 };

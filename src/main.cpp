@@ -15,10 +15,9 @@ int main(int argc, char* argv[])
     try
     {
         ExpressionParser parser(expression);
-        ICalculatable* root = parser.Parse();
+        std::unique_ptr<ICalculatable> root = parser.Parse();
         double result = root->Calculate();
         std::cout << result << std::endl;
-        delete root;
     }
     catch (std::exception& e)
     {

@@ -1,11 +1,7 @@
 #include "Square.h"
 
-Square::Square(ICalculatable* operand) :
-	_Operand(operand) {}
-
-Square::~Square() {
-	delete _Operand;
-}
+Square::Square(std::unique_ptr<ICalculatable> operand) :
+	_Operand(std::move(operand)) {}
 
 double Square::Calculate() const {
 	return std::sqrt(_Operand->Calculate());

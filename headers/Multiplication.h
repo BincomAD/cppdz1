@@ -4,10 +4,9 @@
 
 class Multiplication : public ICalculatable {
 private:
-	ICalculatable* _leftOperand;
-	ICalculatable* _rightOperand;
+	std::unique_ptr<ICalculatable> _leftOperand;
+	std::unique_ptr<ICalculatable> _rightOperand;
 public:
-	Multiplication(ICalculatable* left, ICalculatable* right);
-	virtual ~Multiplication();
+	Multiplication(std::unique_ptr<ICalculatable> left, std::unique_ptr<ICalculatable> right);
 	virtual double Calculate() const override;
 };

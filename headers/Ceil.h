@@ -5,9 +5,8 @@
 
 class Ceil : public ICalculatable {
 private:
-	ICalculatable* _Operand;
+	std::unique_ptr<ICalculatable> _Operand;
 public:
-	Ceil(ICalculatable* operand);
-	virtual ~Ceil();
+	Ceil(std::unique_ptr<ICalculatable> operand);
 	virtual double Calculate() const override;
 };

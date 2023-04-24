@@ -12,6 +12,7 @@
 #include <string>
 #include <sstream>
 #include <iostream>
+#include <memory>
 
 class ExpressionParser
 {
@@ -21,10 +22,10 @@ private:
 
 public:
     ExpressionParser(const std::string& expression);
-    ICalculatable* Parse();
+    std::unique_ptr<ICalculatable> Parse();
 
 private:
-    ICalculatable* ParseExpression();
-    ICalculatable* ParseTerm();
-    ICalculatable* ParseFactor();
+    std::unique_ptr<ICalculatable> ParseExpression();
+    std::unique_ptr<ICalculatable> ParseTerm();
+    std::unique_ptr<ICalculatable> ParseFactor();
 };

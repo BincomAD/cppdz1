@@ -1,11 +1,7 @@
 #include "Ceil.h"
 
-Ceil::Ceil(ICalculatable* operand) :
-	_Operand(operand) {}
-
-Ceil::~Ceil() {
-	delete _Operand;
-}
+Ceil::Ceil(std::unique_ptr<ICalculatable> operand) :
+	_Operand(std::move(operand)) {}
 
 double Ceil::Calculate() const {
 	return std::ceil(_Operand->Calculate());

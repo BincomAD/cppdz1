@@ -4,11 +4,10 @@
 
 class Addition : public ICalculatable {
 private:
-	ICalculatable* _leftOperand;
-	ICalculatable* _rightOperand;
+	std::unique_ptr<ICalculatable> _leftOperand;
+	std::unique_ptr<ICalculatable> _rightOperand;
 
 public:
-	Addition(ICalculatable* left, ICalculatable* right);
-	virtual ~Addition();
+	Addition(std::unique_ptr<ICalculatable> left, std::unique_ptr<ICalculatable> right);
 	virtual double Calculate() const override;
 };

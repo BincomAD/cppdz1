@@ -1,12 +1,7 @@
 #include "Multiplication.h"
 
-Multiplication::Multiplication(ICalculatable* left, ICalculatable* right) :
-	_leftOperand(left), _rightOperand(right) {}
-
-Multiplication::~Multiplication() {
-	delete _leftOperand;
-	delete _rightOperand;
-}
+Multiplication::Multiplication(std::unique_ptr<ICalculatable> left, std::unique_ptr<ICalculatable> right) :
+	_leftOperand(std::move(left)), _rightOperand(std::move(right)) {}
 
 double Multiplication::Calculate() const {
 	return _leftOperand->Calculate() * _rightOperand->Calculate();

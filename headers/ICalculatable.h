@@ -1,8 +1,9 @@
 #pragma once
 
+#include <memory>
+
 class ICalculatable
 {
 public:
-    virtual ~ICalculatable() {}
     virtual double Calculate() const = 0;
 };
